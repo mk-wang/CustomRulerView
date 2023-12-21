@@ -7,3 +7,4 @@
 
 #import "RulerConfig.h"
 #import "RulerView.h"
+#import "RulerDefs.h"

@@ -7,20 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		185E27BD2109634D00059D18 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E27BC2109634D00059D18 /* AppDelegate.m */; };
-		185E27C02109634D00059D18 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E27BF2109634D00059D18 /* ViewController.m */; };
-		185E27C32109634D00059D18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185E27C12109634D00059D18 /* Main.storyboard */; };
-		185E27C52109634F00059D18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 185E27C42109634F00059D18 /* Assets.xcassets */; };
-		185E27C82109634F00059D18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185E27C62109634F00059D18 /* LaunchScreen.storyboard */; };
-		185E27CB2109634F00059D18 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E27CA2109634F00059D18 /* main.m */; };
-		4DFBAC022B3464670019C61B /* RulerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DFBABFA2B3464660019C61B /* RulerConfig.m */; };
-		4DFBAC032B3464670019C61B /* RulerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DFBABFC2B3464660019C61B /* RulerView.m */; };
-		4DFBAC042B3464670019C61B /* RulerLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DFBABFE2B3464660019C61B /* RulerLayout.m */; };
-		4DFBAC052B3464670019C61B /* RulerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DFBAC012B3464660019C61B /* RulerCollectionViewCell.m */; };
+		4DFBAC092B346D820019C61B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E27BF2109634D00059D18 /* ViewController.m */; };
+		4DFBAC0A2B346D820019C61B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E27CA2109634F00059D18 /* main.m */; };
+		4DFBAC0B2B346D820019C61B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E27BC2109634D00059D18 /* AppDelegate.m */; };
+		4DFBAC0F2B346D820019C61B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185E27C62109634F00059D18 /* LaunchScreen.storyboard */; };
+		4DFBAC102B346D820019C61B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 185E27C42109634F00059D18 /* Assets.xcassets */; };
+		4DFBAC112B346D820019C61B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185E27C12109634D00059D18 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		185E27B82109634D00059D18 /* CustomRulerView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomRulerView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		124FBFBFCDACE69A8FDA5908 /* Pods-CustomRulerViewExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomRulerViewExample.release.xcconfig"; path = "Target Support Files/Pods-CustomRulerViewExample/Pods-CustomRulerViewExample.release.xcconfig"; sourceTree = "<group>"; };
 		185E27BB2109634D00059D18 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		185E27BC2109634D00059D18 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		185E27BE2109634D00059D18 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -30,21 +26,13 @@
 		185E27C72109634F00059D18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		185E27C92109634F00059D18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		185E27CA2109634F00059D18 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		4DFBABF72B3464660019C61B /* RulerDefs_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RulerDefs_Private.h; sourceTree = "<group>"; };
-		4DFBABF82B3464660019C61B /* RulerLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RulerLayout.h; sourceTree = "<group>"; };
-		4DFBABF92B3464660019C61B /* CustomRulerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomRulerView.h; sourceTree = "<group>"; };
-		4DFBABFA2B3464660019C61B /* RulerConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RulerConfig.m; sourceTree = "<group>"; };
-		4DFBABFB2B3464660019C61B /* RulerCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RulerCollectionViewCell.h; sourceTree = "<group>"; };
-		4DFBABFC2B3464660019C61B /* RulerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RulerView.m; sourceTree = "<group>"; };
-		4DFBABFD2B3464660019C61B /* RulerDefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RulerDefs.h; sourceTree = "<group>"; };
-		4DFBABFE2B3464660019C61B /* RulerLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RulerLayout.m; sourceTree = "<group>"; };
-		4DFBABFF2B3464660019C61B /* RulerConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RulerConfig.h; sourceTree = "<group>"; };
-		4DFBAC002B3464660019C61B /* RulerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RulerView.h; sourceTree = "<group>"; };
-		4DFBAC012B3464660019C61B /* RulerCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RulerCollectionViewCell.m; sourceTree = "<group>"; };
+		2C1B57442976BD64578B5DAC /* Pods-CustomRulerViewExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomRulerViewExample.debug.xcconfig"; path = "Target Support Files/Pods-CustomRulerViewExample/Pods-CustomRulerViewExample.debug.xcconfig"; sourceTree = "<group>"; };
+		4DFBAC152B346D820019C61B /* CustomRulerViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomRulerViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DFBAC162B346D830019C61B /* CustomRulerView copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CustomRulerView copy-Info.plist"; path = "/Users/mk/Desktop/ss/CustomRulerView/Example/CustomRulerView copy-Info.plist"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		185E27B52109634D00059D18 /* Frameworks */ = {
+		4DFBAC0C2B346D820019C61B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -59,13 +47,16 @@
 			children = (
 				185E27BA2109634D00059D18 /* CustomRulerView */,
 				185E27B92109634D00059D18 /* Products */,
+				A317364122C2B0B975DFA339 /* Pods */,
+				8025F7CD2A5089B25A4717B4 /* Frameworks */,
+				4DFBAC162B346D830019C61B /* CustomRulerView copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
 		185E27B92109634D00059D18 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				185E27B82109634D00059D18 /* CustomRulerView.app */,
+				4DFBAC152B346D820019C61B /* CustomRulerViewExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,7 +64,6 @@
 		185E27BA2109634D00059D18 /* CustomRulerView */ = {
 			isa = PBXGroup;
 			children = (
-				4DFBABF62B3464660019C61B /* View */,
 				185E27BB2109634D00059D18 /* AppDelegate.h */,
 				185E27BC2109634D00059D18 /* AppDelegate.m */,
 				185E27BE2109634D00059D18 /* ViewController.h */,
@@ -87,42 +77,41 @@
 			path = CustomRulerView;
 			sourceTree = "<group>";
 		};
-		4DFBABF62B3464660019C61B /* View */ = {
+		8025F7CD2A5089B25A4717B4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4DFBABF72B3464660019C61B /* RulerDefs_Private.h */,
-				4DFBABF82B3464660019C61B /* RulerLayout.h */,
-				4DFBABF92B3464660019C61B /* CustomRulerView.h */,
-				4DFBABFA2B3464660019C61B /* RulerConfig.m */,
-				4DFBABFB2B3464660019C61B /* RulerCollectionViewCell.h */,
-				4DFBABFC2B3464660019C61B /* RulerView.m */,
-				4DFBABFD2B3464660019C61B /* RulerDefs.h */,
-				4DFBABFE2B3464660019C61B /* RulerLayout.m */,
-				4DFBABFF2B3464660019C61B /* RulerConfig.h */,
-				4DFBAC002B3464660019C61B /* RulerView.h */,
-				4DFBAC012B3464660019C61B /* RulerCollectionViewCell.m */,
 			);
-			path = View;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A317364122C2B0B975DFA339 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2C1B57442976BD64578B5DAC /* Pods-CustomRulerViewExample.debug.xcconfig */,
+				124FBFBFCDACE69A8FDA5908 /* Pods-CustomRulerViewExample.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		185E27B72109634D00059D18 /* CustomRulerView */ = {
+		4DFBAC062B346D820019C61B /* CustomRulerViewExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 185E27CE2109634F00059D18 /* Build configuration list for PBXNativeTarget "CustomRulerView" */;
+			buildConfigurationList = 4DFBAC122B346D820019C61B /* Build configuration list for PBXNativeTarget "CustomRulerViewExample" */;
 			buildPhases = (
-				185E27B42109634D00059D18 /* Sources */,
-				185E27B52109634D00059D18 /* Frameworks */,
-				185E27B62109634D00059D18 /* Resources */,
+				4DFBAC072B346D820019C61B /* [CP] Check Pods Manifest.lock */,
+				4DFBAC082B346D820019C61B /* Sources */,
+				4DFBAC0C2B346D820019C61B /* Frameworks */,
+				4DFBAC0E2B346D820019C61B /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = CustomRulerView;
+			name = CustomRulerViewExample;
 			productName = CustomRulerView;
-			productReference = 185E27B82109634D00059D18 /* CustomRulerView.app */;
+			productReference = 4DFBAC152B346D820019C61B /* CustomRulerViewExample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -133,11 +122,6 @@
 			attributes = {
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = apple;
-				TargetAttributes = {
-					185E27B72109634D00059D18 = {
-						CreatedOnToolsVersion = 9.4.1;
-					};
-				};
 			};
 			buildConfigurationList = 185E27B32109634D00059D18 /* Build configuration list for PBXProject "CustomRulerView" */;
 			compatibilityVersion = "Xcode 9.3";
@@ -152,36 +136,57 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				185E27B72109634D00059D18 /* CustomRulerView */,
+				4DFBAC062B346D820019C61B /* CustomRulerViewExample */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		185E27B62109634D00059D18 /* Resources */ = {
+		4DFBAC0E2B346D820019C61B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				185E27C82109634F00059D18 /* LaunchScreen.storyboard in Resources */,
-				185E27C52109634F00059D18 /* Assets.xcassets in Resources */,
-				185E27C32109634D00059D18 /* Main.storyboard in Resources */,
+				4DFBAC0F2B346D820019C61B /* LaunchScreen.storyboard in Resources */,
+				4DFBAC102B346D820019C61B /* Assets.xcassets in Resources */,
+				4DFBAC112B346D820019C61B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4DFBAC072B346D820019C61B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CustomRulerViewExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		185E27B42109634D00059D18 /* Sources */ = {
+		4DFBAC082B346D820019C61B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DFBAC042B3464670019C61B /* RulerLayout.m in Sources */,
-				4DFBAC032B3464670019C61B /* RulerView.m in Sources */,
-				4DFBAC022B3464670019C61B /* RulerConfig.m in Sources */,
-				4DFBAC052B3464670019C61B /* RulerCollectionViewCell.m in Sources */,
-				185E27C02109634D00059D18 /* ViewController.m in Sources */,
-				185E27CB2109634F00059D18 /* main.m in Sources */,
-				185E27BD2109634D00059D18 /* AppDelegate.m in Sources */,
+				4DFBAC092B346D820019C61B /* ViewController.m in Sources */,
+				4DFBAC0A2B346D820019C61B /* main.m in Sources */,
+				4DFBAC0B2B346D820019C61B /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,14 +322,15 @@
 			};
 			name = Release;
 		};
-		185E27CF2109634F00059D18 /* Debug */ = {
+		4DFBAC132B346D820019C61B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C1B57442976BD64578B5DAC /* Pods-CustomRulerViewExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = RNL7SY23B3;
-				INFOPLIST_FILE = CustomRulerView/Info.plist;
+				INFOPLIST_FILE = "CustomRulerView copy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -337,14 +343,15 @@
 			};
 			name = Debug;
 		};
-		185E27D02109634F00059D18 /* Release */ = {
+		4DFBAC142B346D820019C61B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 124FBFBFCDACE69A8FDA5908 /* Pods-CustomRulerViewExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = RNL7SY23B3;
-				INFOPLIST_FILE = CustomRulerView/Info.plist;
+				INFOPLIST_FILE = "CustomRulerView copy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -369,11 +376,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		185E27CE2109634F00059D18 /* Build configuration list for PBXNativeTarget "CustomRulerView" */ = {
+		4DFBAC122B346D820019C61B /* Build configuration list for PBXNativeTarget "CustomRulerViewExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				185E27CF2109634F00059D18 /* Debug */,
-				185E27D02109634F00059D18 /* Release */,
+				4DFBAC132B346D820019C61B /* Debug */,
+				4DFBAC142B346D820019C61B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
-@class RulerConfig;
 
+@class RulerConfig;
 @protocol RulerViewDelegate <NSObject>
 
 // RulerConfig.isDecimal 是 10倍的 整数
