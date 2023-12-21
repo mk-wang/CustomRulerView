@@ -8,7 +8,8 @@
 
 #import "ViewController.h"
 
-#import "RulerView.h"
+#import "CustomRulerView.h"
+#import "RulerDefs_Private.h"
 
 @interface ViewController () <RulerViewDelegate>
 
@@ -36,14 +37,10 @@
 }
 
 #pragma mark - 代理方法
-- (void)rulerSelectValue:(double)value tag:(NSInteger)tag {
+- (void)rulerSelectValue:(NSInteger)value tag:(NSInteger)tag {
     if (tag == 1) {
         self.numberBottomRulerDefaultLabel.text = [NSString stringWithFormat:@"选中值：%li", (long)value];
-    } else if (tag == 3) {
-        
-    }
-    
-    NSLog(@"value = %lf", value);
+    } 
 }
 
 #pragma mark - getter
@@ -55,14 +52,11 @@
         _numberTopRulerView.delegate = self;
         
         RulerConfig *config = [[RulerConfig alloc] init];
-        //刻度高度
-        config.shortScaleLength = 7;
-        config.longScaleLength = 11;
+        //刻度
+        config.shortScale = [RulerScaleConfig scaleWithLength:7 start:58];
+        config.longScale = [RulerScaleConfig scaleWithLength:11 start:54];
         //刻度宽度
         config.scaleWidth = 2;
-        //刻度起始位置
-        config.shortScaleStart = 58;
-        config.longScaleStart = 54;
         //刻度颜色
         config.scaleColor = UIColorFromHex(0xdae0ed);
         //刻度之间的距离
@@ -106,13 +100,11 @@
         
         RulerConfig *config = [[RulerConfig alloc] init];
         //刻度高度
-        config.shortScaleLength = 17.5;
-        config.longScaleLength = 25;
+        config.shortScale = [RulerScaleConfig scaleWithLength:17.5 start:25];
+        config.longScale = [RulerScaleConfig scaleWithLength:25 start:25];
+
         //刻度宽度
         config.scaleWidth = 2;
-        //刻度起始位置
-        config.shortScaleStart = 25;
-        config.longScaleStart = 25;
         //刻度颜色
         config.scaleColor = UIColorFromHex(0xdae0ed);
         //刻度之间的距离
@@ -151,13 +143,10 @@
         
         RulerConfig *config = [[RulerConfig alloc] init];
         //刻度高度
-        config.shortScaleLength = 12;
-        config.longScaleLength = 16;
+        config.shortScale = [RulerScaleConfig scaleWithLength:12 start:78];
+        config.longScale = [RulerScaleConfig scaleWithLength:16 start:74];
         //刻度宽度
         config.scaleWidth = 2;
-        //刻度起始位置
-        config.shortScaleStart = 78;
-        config.longScaleStart = 74;
         //刻度颜色
         config.scaleColor = UIColorFromHex(0xdae0ed);
         //刻度之间的距离
@@ -202,13 +191,13 @@
         
         RulerConfig *config = [[RulerConfig alloc] init];
         //刻度高度
-        config.shortScaleLength = 17.5;
-        config.longScaleLength = 25;
+        
+        config.shortScale = [RulerScaleConfig scaleWithLength:17.5 start:25];
+        config.longScale = [RulerScaleConfig scaleWithLength:25 start:25];
+
         //刻度宽度
         config.scaleWidth = 2;
-        //刻度起始位置
-        config.shortScaleStart = 25;
-        config.longScaleStart = 25;
+
         //刻度颜色
         config.scaleColor = UIColorFromHex(0xdae0ed);
         //刻度之间的距离

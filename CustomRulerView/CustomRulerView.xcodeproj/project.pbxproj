@@ -13,9 +13,10 @@
 		185E27C52109634F00059D18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 185E27C42109634F00059D18 /* Assets.xcassets */; };
 		185E27C82109634F00059D18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185E27C62109634F00059D18 /* LaunchScreen.storyboard */; };
 		185E27CB2109634F00059D18 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E27CA2109634F00059D18 /* main.m */; };
-		185E27D8210963EA00059D18 /* RulerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E27D4210963EA00059D18 /* RulerView.m */; };
-		185E27D9210963EA00059D18 /* RulerLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E27D5210963EA00059D18 /* RulerLayout.m */; };
-		185E27DA210963EA00059D18 /* RulerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E27D7210963EA00059D18 /* RulerCollectionViewCell.m */; };
+		4DFBAC022B3464670019C61B /* RulerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DFBABFA2B3464660019C61B /* RulerConfig.m */; };
+		4DFBAC032B3464670019C61B /* RulerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DFBABFC2B3464660019C61B /* RulerView.m */; };
+		4DFBAC042B3464670019C61B /* RulerLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DFBABFE2B3464660019C61B /* RulerLayout.m */; };
+		4DFBAC052B3464670019C61B /* RulerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DFBAC012B3464660019C61B /* RulerCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,12 +30,17 @@
 		185E27C72109634F00059D18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		185E27C92109634F00059D18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		185E27CA2109634F00059D18 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		185E27D2210963EA00059D18 /* RulerLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RulerLayout.h; sourceTree = "<group>"; };
-		185E27D3210963EA00059D18 /* RulerCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RulerCollectionViewCell.h; sourceTree = "<group>"; };
-		185E27D4210963EA00059D18 /* RulerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RulerView.m; sourceTree = "<group>"; };
-		185E27D5210963EA00059D18 /* RulerLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RulerLayout.m; sourceTree = "<group>"; };
-		185E27D6210963EA00059D18 /* RulerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RulerView.h; sourceTree = "<group>"; };
-		185E27D7210963EA00059D18 /* RulerCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RulerCollectionViewCell.m; sourceTree = "<group>"; };
+		4DFBABF72B3464660019C61B /* RulerDefs_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RulerDefs_Private.h; sourceTree = "<group>"; };
+		4DFBABF82B3464660019C61B /* RulerLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RulerLayout.h; sourceTree = "<group>"; };
+		4DFBABF92B3464660019C61B /* CustomRulerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomRulerView.h; sourceTree = "<group>"; };
+		4DFBABFA2B3464660019C61B /* RulerConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RulerConfig.m; sourceTree = "<group>"; };
+		4DFBABFB2B3464660019C61B /* RulerCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RulerCollectionViewCell.h; sourceTree = "<group>"; };
+		4DFBABFC2B3464660019C61B /* RulerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RulerView.m; sourceTree = "<group>"; };
+		4DFBABFD2B3464660019C61B /* RulerDefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RulerDefs.h; sourceTree = "<group>"; };
+		4DFBABFE2B3464660019C61B /* RulerLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RulerLayout.m; sourceTree = "<group>"; };
+		4DFBABFF2B3464660019C61B /* RulerConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RulerConfig.h; sourceTree = "<group>"; };
+		4DFBAC002B3464660019C61B /* RulerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RulerView.h; sourceTree = "<group>"; };
+		4DFBAC012B3464660019C61B /* RulerCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RulerCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +73,7 @@
 		185E27BA2109634D00059D18 /* CustomRulerView */ = {
 			isa = PBXGroup;
 			children = (
-				185E27D1210963EA00059D18 /* View */,
+				4DFBABF62B3464660019C61B /* View */,
 				185E27BB2109634D00059D18 /* AppDelegate.h */,
 				185E27BC2109634D00059D18 /* AppDelegate.m */,
 				185E27BE2109634D00059D18 /* ViewController.h */,
@@ -81,15 +87,20 @@
 			path = CustomRulerView;
 			sourceTree = "<group>";
 		};
-		185E27D1210963EA00059D18 /* View */ = {
+		4DFBABF62B3464660019C61B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				185E27D6210963EA00059D18 /* RulerView.h */,
-				185E27D4210963EA00059D18 /* RulerView.m */,
-				185E27D3210963EA00059D18 /* RulerCollectionViewCell.h */,
-				185E27D7210963EA00059D18 /* RulerCollectionViewCell.m */,
-				185E27D2210963EA00059D18 /* RulerLayout.h */,
-				185E27D5210963EA00059D18 /* RulerLayout.m */,
+				4DFBABF72B3464660019C61B /* RulerDefs_Private.h */,
+				4DFBABF82B3464660019C61B /* RulerLayout.h */,
+				4DFBABF92B3464660019C61B /* CustomRulerView.h */,
+				4DFBABFA2B3464660019C61B /* RulerConfig.m */,
+				4DFBABFB2B3464660019C61B /* RulerCollectionViewCell.h */,
+				4DFBABFC2B3464660019C61B /* RulerView.m */,
+				4DFBABFD2B3464660019C61B /* RulerDefs.h */,
+				4DFBABFE2B3464660019C61B /* RulerLayout.m */,
+				4DFBABFF2B3464660019C61B /* RulerConfig.h */,
+				4DFBAC002B3464660019C61B /* RulerView.h */,
+				4DFBAC012B3464660019C61B /* RulerCollectionViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -164,12 +175,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DFBAC042B3464670019C61B /* RulerLayout.m in Sources */,
+				4DFBAC032B3464670019C61B /* RulerView.m in Sources */,
+				4DFBAC022B3464670019C61B /* RulerConfig.m in Sources */,
+				4DFBAC052B3464670019C61B /* RulerCollectionViewCell.m in Sources */,
 				185E27C02109634D00059D18 /* ViewController.m in Sources */,
 				185E27CB2109634F00059D18 /* main.m in Sources */,
-				185E27D9210963EA00059D18 /* RulerLayout.m in Sources */,
-				185E27DA210963EA00059D18 /* RulerCollectionViewCell.m in Sources */,
 				185E27BD2109634D00059D18 /* AppDelegate.m in Sources */,
-				185E27D8210963EA00059D18 /* RulerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,7 +258,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -298,7 +310,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -313,7 +325,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = RNL7SY23B3;
 				INFOPLIST_FILE = CustomRulerView/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -333,7 +345,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = RNL7SY23B3;
 				INFOPLIST_FILE = CustomRulerView/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
