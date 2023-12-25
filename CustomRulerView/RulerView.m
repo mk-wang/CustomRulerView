@@ -57,6 +57,8 @@ static NSString *const rulerCollectionViewCellIdentifier = @"rulerCollectionView
 #pragma mark - 视图布局
 - (void)layoutViews
 {
+    self.activeDelegate = NO;
+
     // 添加渐变层
     if (self.rulerConfig.useGradient) {
         [self addStartGradientLayer];
