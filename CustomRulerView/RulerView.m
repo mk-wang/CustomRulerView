@@ -79,21 +79,22 @@ static NSString *const rulerCollectionViewCellIdentifier = @"rulerCollectionView
         self.rulerLayout.itemSize = CGSizeMake(CGRectGetWidth(self.frame), self.rulerConfig.scaleWidth);
     }
 
-    self.rulerCollectionView = [[UICollectionView alloc] initWithFrame:self.bounds collectionViewLayout:self.rulerLayout];
-    self.rulerCollectionView.delegate = self;
-    self.rulerCollectionView.dataSource = self;
-    self.rulerCollectionView.showsVerticalScrollIndicator = NO;
-    self.rulerCollectionView.showsHorizontalScrollIndicator = NO;
-    self.rulerCollectionView.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0];
-
     // 初始化数据
     [self initialData];
 
-    // 前后偏移
-    self.rulerCollectionView.contentInset = (kDirectionHorizontal ? UIEdgeInsetsMake(0, CGRectGetWidth(self.frame) / 2.0, 0, CGRectGetWidth(self.frame) / 2.0) : UIEdgeInsetsMake(CGRectGetHeight(self.frame) / 2.0, 0, CGRectGetHeight(self.frame) / 2.0, 0));
+    self.rulerCollectionView = [[UICollectionView alloc] initWithFrame:self.bounds collectionViewLayout:self.rulerLayout];
+    self.rulerCollectionView.showsVerticalScrollIndicator = NO;
+    self.rulerCollectionView.showsHorizontalScrollIndicator = NO;
+    self.rulerCollectionView.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0];
     self.rulerCollectionView.bounces = NO;
     [self.rulerCollectionView registerClass:[RulerCollectionViewCell class] forCellWithReuseIdentifier:rulerCollectionViewCellIdentifier];
+
+    // 前后偏移
+    self.rulerCollectionView.contentInset = (kDirectionHorizontal ? UIEdgeInsetsMake(0, CGRectGetWidth(self.frame) / 2.0, 0, CGRectGetWidth(self.frame) / 2.0) : UIEdgeInsetsMake(CGRectGetHeight(self.frame) / 2.0, 0, CGRectGetHeight(self.frame) / 2.0, 0));
     [self addSubview:self.rulerCollectionView];
+    
+    self.rulerCollectionView.delegate = self;
+    self.rulerCollectionView.dataSource = self;
 
     // 指针
     self.indicatorView = [[UIImageView alloc] init];
