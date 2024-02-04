@@ -472,6 +472,10 @@ static NSString *const rulerCollectionViewCellIdentifier = @"rulerCollectionView
     if (index != NULL) {
         *index = targetIndex;
     }
+    
+    if (suitable != NULL) {
+        *suitable = suitableNumber;
+    }
 
     // 如果没有默认值，就初始偏移
     if (offset == 0) {
