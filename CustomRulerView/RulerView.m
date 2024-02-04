@@ -92,7 +92,7 @@ static NSString *const rulerCollectionViewCellIdentifier = @"rulerCollectionView
     // 前后偏移
     self.rulerCollectionView.contentInset = (kDirectionHorizontal ? UIEdgeInsetsMake(0, CGRectGetWidth(self.frame) / 2.0, 0, CGRectGetWidth(self.frame) / 2.0) : UIEdgeInsetsMake(CGRectGetHeight(self.frame) / 2.0, 0, CGRectGetHeight(self.frame) / 2.0, 0));
     [self addSubview:self.rulerCollectionView];
-    
+
     self.rulerCollectionView.delegate = self;
     self.rulerCollectionView.dataSource = self;
 
@@ -103,59 +103,21 @@ static NSString *const rulerCollectionViewCellIdentifier = @"rulerCollectionView
     self.indicatorView.layer.cornerRadius = self.rulerConfig.pointSize.width / 2.0;
     [self addSubview:self.indicatorView];
 
-    // 默认选中 偏移 = 指定数值 * (cell宽 + 刻度之间的距离) - 默认偏移 + cell宽的一半
-    double offset = 0;
-    // 初始偏移值
-    double contentInset = (kDirectionHorizontal ? self.rulerCollectionView.contentInset.left : self.rulerCollectionView.contentInset.top);
     BOOL suitableNumber = NO; // 默认选中值是否符合条件
+    NSInteger targetIndex = 0;
 
-    // 默认选中值有效才能调用偏移方法
-    double activeSelectionNumber = 0;
-    if (self.rulerConfig.reverse) {
-        activeSelectionNumber = self.rulerConfig.max - self.rulerConfig.defaultNumber;
-    } else {
-        activeSelectionNumber = self.rulerConfig.defaultNumber - self.rulerConfig.min;
-    }
+    CGPoint contentOffset = [self contentOffsetOf:self.rulerConfig.defaultNumber
+                                         suitable:&suitableNumber
+                                            index:&targetIndex];
+    self.selectIndex = targetIndex;
 
-    if (activeSelectionNumber >= 0) {
-        if (self.rulerConfig.isDecimal) {
-            // 偏移计算：(单个刻度尺宽度 + 刻度尺间距) * 总刻度 - 起始偏移 + 最后一个刻度宽度 / 2.0
-            offset = activeSelectionNumber * 10 * (self.rulerConfig.scaleWidth + self.rulerConfig.distanceBetweenScale) - contentInset + (self.rulerConfig.scaleWidth / 2.0);
-            // 检测数字是否符合条件
-            NSString *defaultValue = [NSString stringWithFormat:@"%lf", activeSelectionNumber * 10];
-            if ([RulerView isInt:defaultValue]) {
-                self.selectIndex = activeSelectionNumber * 10;
-                suitableNumber = YES;
-            }
-        } else {
-            // 偏移计算：(单个刻度尺宽度 + 刻度尺间距) * 总刻度 - 起始偏移 + 最后一个刻度宽度 / 2.0
-            offset = activeSelectionNumber * (self.rulerConfig.scaleWidth + self.rulerConfig.distanceBetweenScale) - contentInset + (self.rulerConfig.scaleWidth / 2.0);
-            self.selectIndex = activeSelectionNumber;
-            suitableNumber = YES;
-        }
-    }
-
-    // 如果没有默认值，就初始偏移
-    if (offset == 0) {
-        offset = -(contentInset - self.rulerConfig.scaleWidth / 2.0);
-    }
     // 有效偏移才允许调用代理方法
     if (suitableNumber) {
         self.activeDelegate = YES;
     }
 
-    // 校正偏差
-    [self correctionDeviation:offset];
-    // 如果是循环尺
-    if (self.rulerConfig.infiniteLoop) {
-        NSInteger totalCount = [self.rulerCollectionView numberOfItemsInSection:0];
-        NSInteger factor = totalCount / self.rulerLayout.actualLength / 2;
-        // 一轮循环的总偏移量
-        CGFloat oneRoundOffset = (self.rulerConfig.scaleWidth + self.rulerConfig.distanceBetweenScale) * self.rulerLayout.actualLength + ((self.rulerConfig.scaleWidth + self.rulerLayout.spacing) * 4 + self.rulerConfig.scaleWidth / 2.0);
-        offset = offset + factor * oneRoundOffset;
-    }
-
-    self.rulerCollectionView.contentOffset = (kDirectionHorizontal ? CGPointMake(offset, 0) : CGPointMake(0, offset)); // 此方法会触发scrollViewDidScroll
+    // 此方法会触发scrollViewDidScroll
+    self.rulerCollectionView.contentOffset = contentOffset;
 
     if (!self.rulerConfig.continuous) {
         __weak __typeof(self) weakSelf = self;
@@ -469,6 +431,72 @@ static NSString *const rulerCollectionViewCellIdentifier = @"rulerCollectionView
             return ([behindNumber integerValue] == 0);
         }
     }
+}
+
+- (CGPoint)contentOffsetOf:(double)value
+                  suitable:(BOOL *)suitable
+                     index:(NSInteger *)index
+{
+    double offset = 0;
+    BOOL suitableNumber = NO; // 默认选中值是否符合条件
+
+    double contentInset = (kDirectionHorizontal ? self.rulerCollectionView.contentInset.left : self.rulerCollectionView.contentInset.top);
+
+    // 默认选中值有效才能调用偏移方法
+    double activeSelectionNumber = 0;
+    if (self.rulerConfig.reverse) {
+        activeSelectionNumber = self.rulerConfig.max - value;
+    } else {
+        activeSelectionNumber = value - self.rulerConfig.min;
+    }
+
+    NSInteger targetIndex = 0;
+    if (activeSelectionNumber >= 0) {
+        if (self.rulerConfig.isDecimal) {
+            // 偏移计算：(单个刻度尺宽度 + 刻度尺间距) * 总刻度 - 起始偏移 + 最后一个刻度宽度 / 2.0
+            offset = activeSelectionNumber * 10 * (self.rulerConfig.scaleWidth + self.rulerConfig.distanceBetweenScale) - contentInset + (self.rulerConfig.scaleWidth / 2.0);
+            // 检测数字是否符合条件
+            NSString *defaultValue = [NSString stringWithFormat:@"%lf", activeSelectionNumber * 10];
+            if ([RulerView isInt:defaultValue]) {
+                targetIndex = activeSelectionNumber * 10;
+                suitableNumber = YES;
+            }
+        } else {
+            // 偏移计算：(单个刻度尺宽度 + 刻度尺间距) * 总刻度 - 起始偏移 + 最后一个刻度宽度 / 2.0
+            offset = activeSelectionNumber * (self.rulerConfig.scaleWidth + self.rulerConfig.distanceBetweenScale) - contentInset + (self.rulerConfig.scaleWidth / 2.0);
+            targetIndex = activeSelectionNumber;
+            suitableNumber = YES;
+        }
+    }
+
+    if (index != NULL) {
+        *index = targetIndex;
+    }
+
+    // 如果没有默认值，就初始偏移
+    if (offset == 0) {
+        offset = -(contentInset - self.rulerConfig.scaleWidth / 2.0);
+    }
+
+    // 校正偏差
+    [self correctionDeviation:offset];
+    // 如果是循环尺
+    if (self.rulerConfig.infiniteLoop) {
+        NSInteger totalCount = [self.rulerCollectionView numberOfItemsInSection:0];
+        NSInteger factor = totalCount / self.rulerLayout.actualLength / 2;
+        // 一轮循环的总偏移量
+        CGFloat oneRoundOffset = (self.rulerConfig.scaleWidth + self.rulerConfig.distanceBetweenScale) * self.rulerLayout.actualLength + ((self.rulerConfig.scaleWidth + self.rulerLayout.spacing) * 4 + self.rulerConfig.scaleWidth / 2.0);
+        offset = offset + factor * oneRoundOffset;
+    }
+
+    CGPoint contentOffset = (kDirectionHorizontal ? CGPointMake(offset, 0) : CGPointMake(0, offset));
+    return contentOffset;
+}
+
+- (void)scrollTo:(double)value animated:(BOOL)animated
+{
+    CGPoint contentOffset = [self contentOffsetOf:value suitable:NULL index:NULL];
+    [self.rulerCollectionView setContentOffset:contentOffset animated:animated];
 }
 
 @end

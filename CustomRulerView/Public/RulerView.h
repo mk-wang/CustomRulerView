@@ -26,6 +26,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) RulerConfig *rulerConfig;     /**< 属性设置  */
 @property (nonatomic, weak) id<RulerViewDelegate> delegate; /**< 代理  */
 
+- (void)scrollTo:(double)value animated:(BOOL)animated;
+
 @end
 
 NS_ASSUME_NONNULL_END
