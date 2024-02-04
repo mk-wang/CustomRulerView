@@ -107,6 +107,7 @@ static NSString *const rulerCollectionViewCellIdentifier = @"rulerCollectionView
     NSInteger targetIndex = 0;
 
     CGPoint contentOffset = [self contentOffsetOf:self.rulerConfig.defaultNumber
+                                     fixDeviation:YES
                                          suitable:&suitableNumber
                                             index:&targetIndex];
     self.selectIndex = targetIndex;
@@ -434,6 +435,7 @@ static NSString *const rulerCollectionViewCellIdentifier = @"rulerCollectionView
 }
 
 - (CGPoint)contentOffsetOf:(double)value
+              fixDeviation:(BOOL)fixDeviation
                   suitable:(BOOL *)suitable
                      index:(NSInteger *)index
 {
@@ -483,7 +485,10 @@ static NSString *const rulerCollectionViewCellIdentifier = @"rulerCollectionView
     }
 
     // 校正偏差
-    [self correctionDeviation:offset];
+    if (fixDeviation) {
+        [self correctionDeviation:offset];
+    }
+    
     // 如果是循环尺
     if (self.rulerConfig.infiniteLoop) {
         NSInteger totalCount = [self.rulerCollectionView numberOfItemsInSection:0];
@@ -499,7 +504,7 @@ static NSString *const rulerCollectionViewCellIdentifier = @"rulerCollectionView
 
 - (void)scrollTo:(double)value animated:(BOOL)animated
 {
-    CGPoint contentOffset = [self contentOffsetOf:value suitable:NULL index:NULL];
+    CGPoint contentOffset = [self contentOffsetOf:value fixDeviation:YES suitable:NULL index:NULL];
     [self.rulerCollectionView setContentOffset:contentOffset animated:animated];
 }
 
