@@ -12,15 +12,26 @@
 
 + (instancetype)scaleWithLength:(CGFloat)length start:(CGFloat)start
 {
-    return [[self alloc] initWithLength:length start:start];
+    return [[self alloc] initWithLength:length start:start color:nil];
+}
+
++ (instancetype)scaleWithLength:(CGFloat)length start:(CGFloat)start color:(UIColor *_Nullable)color {
+    return  [[self alloc] initWithLength:length start:start color:color];
 }
 
 - (instancetype)initWithLength:(CGFloat)length start:(CGFloat)start
 {
+    return [self initWithLength:length start:start color:nil];
+}
+
+- (instancetype)initWithLength:(CGFloat)length
+                         start:(CGFloat)start
+                         color:(UIColor *_Nullable)color {
     self = [super init];
     if (self) {
         _length = length;
         _start = start;
+        _color = color;
     }
     return self;
 }

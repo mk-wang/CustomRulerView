@@ -1,5 +1,5 @@
 PODS:
-  - CustomRulerView (1.0.0)
+  - CustomRulerView (1.0.1)
   - LookinServer (1.2.5):
     - LookinServer/Core (= 1.2.5)
   - LookinServer/Core (1.2.5)
@@ -17,9 +17,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CustomRulerView: 0609596bbdd8a3c804ad6a0cb8b43856395fa713
+  CustomRulerView: 9bbbb7678503057cc2c0bb649f3db88812f859b3
   LookinServer: 6805292e8d2ff9ddfcfaa9357fc5c1f277c90afd
 
 PODFILE CHECKSUM: 2c9b43f892a72fbfd4b44868402986a99de82e0a
 
-COCOAPODS: 1.12.1
+COCOAPODS: 1.16.2

@@ -21,9 +21,13 @@ typedef RulerScaleConfig *_Nullable (^RulerConfigScaleLengthBuilder)(RulerConfig
 
 @property (nonatomic, assign) CGFloat length; /**< 刻度长度  */
 @property (nonatomic, assign) CGFloat start;  /**< 刻度起始位置  */
+@property (nonatomic, nonnull, strong) UIColor *color;
 
 + (instancetype)scaleWithLength:(CGFloat)length start:(CGFloat)start;
++ (instancetype)scaleWithLength:(CGFloat)length start:(CGFloat)start color:(UIColor *_Nullable)color;
+
 - (instancetype)initWithLength:(CGFloat)length start:(CGFloat)start;
+- (instancetype)initWithLength:(CGFloat)length start:(CGFloat)start color:(UIColor *_Nullable)color;
 
 @end
 

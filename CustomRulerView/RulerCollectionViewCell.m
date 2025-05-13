@@ -90,9 +90,11 @@
     if (scaleConfig != nil) {
         CGFloat length = scaleConfig.length;
         CGFloat start = scaleConfig.start;
-        self.ruleImageView.frame = kHorizontalCell ? CGRectMake(0, start, self.rulerConfig.scaleWidth, length) : CGRectMake(start, 0, length, self.rulerConfig.scaleWidth);
-        self.ruleImageView.layer.cornerRadius = self.rulerConfig.scaleWidth / 2.0;
-        self.ruleImageView.backgroundColor = self.rulerConfig.scaleColor;
+        CGFloat scaleWidth = self.rulerConfig.scaleWidth;
+        UIColor *scaleColor = scaleConfig.color ?: self.rulerConfig.scaleColor;
+        self.ruleImageView.frame = kHorizontalCell ? CGRectMake(0, start, scaleWidth, length) : CGRectMake(start, 0, length, scaleWidth);
+        self.ruleImageView.layer.cornerRadius = scaleWidth / 2.0;
+        self.ruleImageView.backgroundColor = scaleColor;
         [self.ruleImageView setHidden:NO];
     } else {
         [self.ruleImageView setHidden:YES];
